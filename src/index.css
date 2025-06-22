@@ -1,0 +1,26 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer utilities {
+  .animate-fade-in {
+    @apply opacity-0 animate-[fadeIn_1s_ease-in-out_forwards];
+  }
+
+  @keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+  }
+
+  .text-outline-gold {
+    text-shadow:
+      -1px -1px 0 #FDB813,
+      1px -1px 0 #FDB813,
+      -1px 1px 0 #FDB813,
+      1px 1px 0 #FDB813;
+  }
+}
+
+body {
+  font-family: 'Segoe Script', 'Brush Script MT', 'Apple Chancery', cursive;
+}
