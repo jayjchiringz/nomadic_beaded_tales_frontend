@@ -5,7 +5,6 @@ const images = [
   '/images/maasai2.jpg',
   '/images/maasai3.jpg',
   '/images/maasai4.jpg',
-  '/images/maasai5.jpg',
 ];
 
 export default function HeroCarousel() {
