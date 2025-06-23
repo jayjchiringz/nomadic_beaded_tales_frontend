@@ -2,6 +2,7 @@
   "name": "frontend",
   "version": "0.1.0",
   "private": true,
+  "proxy": "https://nomadic-beaded-tales-backend.onrender.com",
   "dependencies": {
     "@tailwindcss/typography": "^0.5.16",
     "@testing-library/dom": "^10.4.0",
