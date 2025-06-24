@@ -5,7 +5,7 @@ export default function ProductGrid() {
 
   // Placeholder fetch (backend hook ready)
   useEffect(() => {
-    fetch('http://localhost:8000/api/products/')
+    fetch(`${process.env.REACT_APP_API_URL}/api/products/`)
       .then((res) => res.json())
       .then((data) => {
         setProducts(data);
