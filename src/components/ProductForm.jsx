@@ -48,6 +48,7 @@ export default function ProductForm({ product, onSave, onCancel }) {
     if (response.ok) {
       const data = await response.json();
       onSave(data);
+      onCancel();
     } else {
       alert("Something went wrong!");
     }
@@ -89,6 +90,14 @@ export default function ProductForm({ product, onSave, onCancel }) {
         required
         className="w-full p-2 mb-3 border rounded"
       />
+      
+      {product?.image && (
+        <img
+          src={product.image}
+          alt="Current"
+          className="w-full h-48 object-cover mb-3 rounded"
+        />
+      )}
 
       <input
         type="file"

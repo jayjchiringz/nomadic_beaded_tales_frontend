@@ -61,7 +61,16 @@ export default function AdminDashboard() {
         Add New Product
       </button>
 
-      {showForm && <ProductForm product={editingProduct} onClose={handleFormClose} />}
+      {showForm && (
+        <ProductForm
+          product={editingProduct}
+          onSave={() => {
+            setShowForm(false);
+            fetchProducts();
+          }}
+          onCancel={() => setShowForm(false)}
+        />
+      )}
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
         {products.map(product => (
